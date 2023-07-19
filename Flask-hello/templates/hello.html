@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+
+{% block title%} 
+    {{super()}}
+    Welcome 
+{% endblock %}
+
+{% block content %}
+    {% if user_ip %}
+        <h1>hello wolrd flask {{user_ip}} </h1>
+    {% else %}
+        <a href="{{url_for('index')}}"> Go Home</a>
+    {% endif %}    
+    <ul>
+        {% for item in all %}
+            {{macros.render_all(item)}}
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+
+
