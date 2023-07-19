@@ -1,0 +1,4 @@
+venv/
+env/
+/env/
+fast-api/hello/venv/
